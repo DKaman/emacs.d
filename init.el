@@ -162,7 +162,6 @@ window configuration."
 ;; color theme
 (load-theme 'wombat)
 
-
 ;; I just wanna be evil
 (require-package 
   '(evil
@@ -174,6 +173,8 @@ window configuration."
 (global-evil-extra-operator-mode t)
 (global-evil-leader-mode t)
 (global-evil-surround-mode t)
+
+(define-key evil-normal-state-map "++" 'text-scale-adjust)
 
 ;; bind evil-args text objects
 (define-key evil-inner-text-objects-map "a" 'evil-inner-arg)
